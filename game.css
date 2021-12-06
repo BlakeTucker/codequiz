@@ -18,3 +18,19 @@ body {
     transform: scale(1.02);
     transform: transform 100ms;
 }
+
+.choice-prefix {
+    padding: 1rem 1.5rem;
+    color: white;
+}
+
+.choice-text {
+    padding: 1rem;
+    width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    .choice-containter {
+        min-width: 40rem;
+    }
+}
