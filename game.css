@@ -2,7 +2,7 @@ body {
     color: #fff;
 }
 
-.choice-containter {
+.choice-container {
     display: flex;
     margin-bottom: 0.8rem;
     width: 100%;
@@ -12,7 +12,7 @@ body {
     min-width: 80rem;
 }
 
-.choice-containter:hover {
+.choice-container:hover {
     cursor: pointer;
     box-shadow: 0 0.4rem 1.4rem 0 rgb(191, 87, 0);
     transform: scale(1.02);
@@ -20,17 +20,55 @@ body {
 }
 
 .choice-prefix {
-    padding: 1rem 1.5rem;
+    padding: 2rem 2.5rem;
     color: white;
 }
 
 .choice-text {
-    padding: 1rem;
+    padding: 2rem;
     width: 100%;
 }
 
+.correct {
+    background: linear-gradient(32deg, rgba(12, 221, 26) 0%, rgb(39, 241, 108) 100%)
+}
+
+.incorrect {
+    background: linear-gradient(32deg, rgba(227, 32, 27, 3) 0%, rgb(230, 8, 14, 3) 100%)
+}
+
+/* Heads up Display */
+#hud {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hud-prefix {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.hud-main-text {
+    text-align: center;
+}
+
+#progressBar {
+    width: 20rem;
+    height: 3rem;
+    border: 0.2rem solid rgb(39, 241, 108);
+    margin-top: 2rem;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+#progressBarFull {
+    height: 100%;
+    background: rgb(39, 241, 108);
+    width: 0%;
+}
+
 @media screen and (max-width: 768px) {
-    .choice-containter {
+    .choice-container {
         min-width: 40rem;
     }
 }
