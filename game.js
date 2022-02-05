@@ -2,9 +2,9 @@ const question = document.querySelector('#question');
 const choices = Array.from(document.querySelectorAll('.choice-text'));
 const progressText = document.querySelector('#progressText');
 const scoreText = document.querySelector('#score');
-const progressBarFull = document.querySelector('#progressBarFull')
+const progressBarFull = document.querySelector('#progressBarFull');
 
-let currentQuestion= {}
+let currentQuestion = {}
 let acceptingAnswers = true
 let score = 0
 let questionCounter = 0
@@ -36,14 +36,6 @@ let questions = [
         answer: 1,
     },
     {
-        question: 'More than one instruction or command followed in order?',
-        choice1: 'Bug',
-        choice2: 'Algorithm',
-        choice3: 'Command',
-        choice4: 'Sequence',
-        answer: 4,
-    },
-    {
         question: 'How many programming languages are there?',
         choice1: 'Around 10',
         choice2: 'Around 25',
@@ -63,17 +55,17 @@ startGame = () => {
     getNewQuestion()
 }
 
-getNewQuestion  = () => {
+getNewQuestion = () => {
     if(availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
         localStorage.setItem('mostRecentScore', score)
 
-        return window.location.asssign('/end.html')
+        return window.location.assign('/end.html')
     }
 
     questionCounter++
-    progressText.innerText = 'Questions ${questionCounter} of ${MAX_QUESTIONS}'
-    progressBarFull.style.width = '${(questionCounter/MAX_QUESTIONS) * 100}%'
-
+    progressText.innerText = `Question ${questionCounter} of ${MAX_QUESTIONS}`
+    progressBarFull.style.width = `${(questionCounter/MAX_QUESTIONS) * 100}%`
+    
     const questionsIndex = Math.floor(Math.random() * availableQuestions.length)
     currentQuestion = availableQuestions[questionsIndex]
     question.innerText = currentQuestion.question
@@ -90,7 +82,7 @@ getNewQuestion  = () => {
 
 choices.forEach(choice => {
     choice.addEventListener('click', e => {
-        if(acceptingAnswers) return
+        if(!acceptingAnswers) return
 
         acceptingAnswers = false
         const selectedChoice = e.target
@@ -107,7 +99,6 @@ choices.forEach(choice => {
         setTimeout(() => {
             selectedChoice.parentElement.classList.remove(classToApply)
             getNewQuestion()
-
 
         }, 1000)
     })

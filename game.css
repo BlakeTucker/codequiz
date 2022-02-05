@@ -7,14 +7,14 @@ body {
     margin-bottom: 0.8rem;
     width: 100%;
     border-radius: 4px;
-    background: rgb(191, 87, 0);
+    background: rgb(18, 93, 255);
     font-size: 3rem;
     min-width: 80rem;
 }
 
 .choice-container:hover {
     cursor: pointer;
-    box-shadow: 0 0.4rem 1.4rem 0 rgb(191, 87, 0);
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(6, 103, 247, 0.5);
     transform: scale(1.02);
     transform: transform 100ms;
 }
@@ -30,11 +30,11 @@ body {
 }
 
 .correct {
-    background: linear-gradient(32deg, rgba(12, 221, 26) 0%, rgb(39, 241, 108) 100%)
+    background: linear-gradient(32deg, rgba(11, 223, 36) 0%, rgb(41, 232, 111) 100%);
 }
 
 .incorrect {
-    background: linear-gradient(32deg, rgba(227, 32, 27, 3) 0%, rgb(230, 8, 14, 3) 100%)
+    background: linear-gradient(32deg, rgba(230, 29, 29, 1) 0%, rgb(224, 11, 11, 1) 100%);
 }
 
 /* Heads up Display */
@@ -55,7 +55,7 @@ body {
 #progressBar {
     width: 20rem;
     height: 3rem;
-    border: 0.2rem solid rgb(39, 241, 108);
+    border: 0.2rem solid rgb(11,223,36);
     margin-top: 2rem;
     border-radius: 50px;
     overflow: hidden;
@@ -63,7 +63,7 @@ body {
 
 #progressBarFull {
     height: 100%;
-    background: rgb(39, 241, 108);
+    background: rgb(11,223,36);
     width: 0%;
 }
 
