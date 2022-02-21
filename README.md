@@ -1,3 +1,4 @@
 # codequiz
-Test your knowledge of web development with this Code Quiz!
-Track your progress throughout the quiz and save high scores!
+Test your knowledge of coding with this Code Quiz
+Track your progress all the way through and save high scores
+https://blaketucker.github.io/codequiz/index.html
